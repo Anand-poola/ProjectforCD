@@ -7,6 +7,14 @@ pipeline {
         git url: 'https://github.com/Anand-poola/ProjectforCD.git', branch: 'main'
     }
         }
+
+        stage('Build with Maven') {
+            steps {
+        echo "Running Maven build..."
+        sh 'mvn clean install -Dmaven.test.failure.ignore=true'
+    }
+}
+    
          
     }
 }
