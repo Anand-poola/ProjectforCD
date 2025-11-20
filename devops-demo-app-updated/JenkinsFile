@@ -11,7 +11,7 @@ pipeline {
         stage('Build with Maven') {
             steps {
         echo "Running Maven build..."
-        sh 'mvn clean install -Dmaven.test.failure.ignore=true'
+        sh 'mvn clean package'
     }
 }
     
