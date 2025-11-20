@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('CHECKOUT FROM GITHUB') {
+            steps {
+                git url: 'https://github.com/Anand-poola/ProjectforCD.git',
+                    branch: 'main',
+                    credentialsId: 'github-cred'
+            }
+        }
+    }
+}
+
