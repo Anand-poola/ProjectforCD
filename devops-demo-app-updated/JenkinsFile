@@ -57,7 +57,7 @@ pipeline {
             steps {
               script {
                 docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-creds') {
-                def img = docker.image('anand/myapp:latest')
+                def img = docker.image('myapp:latest')
                 img.push()
             }
         }
